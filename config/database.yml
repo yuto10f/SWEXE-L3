@@ -22,4 +22,10 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+database: test_render_c5vw
+username: test_render_c5vw_user
+password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
+url: <%= ENV['DATABASE_URL'] %>
